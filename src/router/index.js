@@ -9,10 +9,6 @@ import JywbRoutes from './jyw-b';
 Vue.use(Router);
 const Default = resolve => require(['@p/index.vue'], resolve);
 const PageNotFound = resolve => require(['@p/errors/not-found'], resolve);
-
-
-const Jywb = resolve => require(['@p/jyw-b'], resolve);
-const JywbHelp = resolve => require(['@p/jyw-b/help'], resolve);
 const myRouter = new Router({
   routes: [
     { path: '*', name: 'pageNotFound', component: PageNotFound },
@@ -41,6 +37,6 @@ myRouter.addRoutes([...MydRoutes, ...JywcRoutes, ...JywbRoutes]);
 //   }
 // });
 myRouter.afterEach((to) => {
-  document.title = to.meta.title || 'haiermoney H5';
+  document.title = to.meta.title || 'H5';
 });
 export default myRouter;

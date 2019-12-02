@@ -19,7 +19,7 @@ module.exports = {
     proxy: {
       '/api': {
         // target: 'http://10.164.236.31:8083',
-        target: 'https://h5-test.haiermoney.com',
+        target: 'https://www.baidu.com',
         changeOrigin: true,
         ws: true,
         pathRewrite: {
