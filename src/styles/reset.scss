@@ -1,0 +1,69 @@
+$designWidth: 750;
+@function px2rem($px) {
+  @return $px/100 + rem;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei UI";
+  color: #333;
+  font-size: px2rem(28);
+  background-color: #f2f2f2;
+}
+*{
+  margin: 0; padding: 0;
+}
+a {
+  text-decoration: none
+}
+button{
+  &:focus{
+    outline: none;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,th{
+  font-weight: normal;
+}
+li{
+  list-style: none;
+}
+/* 覆盖mint-ui的primary颜色，改为微信UI的绿色 */
+$color-primary: #007CFF;
+
+input::-webkit-input-placeholder {
+  color: #B2B2B2;
+} 
+input:-moz-placeholder {
+  color: #B2B2B2;
+} 
+input::-moz-placeholder {
+  color: #B2B2B2;
+} 
+input:-ms-input-placeholder {
+  color: #B2B2B2;
+}
+input {
+  outline:none;
+  box-shadow: none;
+  -webkit-appearance: none;
+} 
+// ios原生样式
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+  border: 0;
+}
+input {
+  border: 0;
+  -webkit-appearance: none;
+}
+textarea {
+  border: 0;
+  -webkit-appearance: none;
+}

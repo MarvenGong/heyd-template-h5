@@ -1,0 +1,65 @@
+.ticket{
+  border-radius: 4px;
+  height: px2rem(150);
+  color: #fff;
+  background-color: $color-primary;
+  box-shadow: 0 0 5px #999;
+  position: relative;
+  margin-bottom: px2rem(20);
+  &:after{
+    content: " ";
+    display: inline-block;
+    width: px2rem(26);
+    height: px2rem(16);
+    border-bottom-left-radius: px2rem(16);
+    border-bottom-right-radius: px2rem(16);
+    background-color: #fff;
+    position: absolute;
+    top: -3px; right: px2rem(232);
+    z-index: 2
+  }
+  &:before{
+    content: " ";
+    display: inline-block;
+    width: px2rem(26);
+    height: px2rem(16);
+    border-top-left-radius: px2rem(16);
+    border-top-right-radius: px2rem(16);
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px; right: px2rem(232);
+    z-index: 2
+  }
+  .ticket-mark{
+    display: inline-block;
+    width: 18px;
+    height: 22px;
+    background: url("/static/images/icon-ticket-mark.png") center no-repeat;
+    position: absolute;
+    left: px2rem(12); top: 0;
+    z-index: 2
+  }
+  .t-amount{
+    font-size: px2rem(50);
+  }
+  .left-info{
+    float: left;
+    padding-left: px2rem(46);
+    padding-top: px2rem(8);
+    width: px2rem(420);
+    .t-use{
+      font-size: px2rem(20);
+    }
+  }
+  .right-action{
+    width: px2rem(245);
+    float: right;
+    border-left: 1px dashed #ccc;
+    text-align: center;
+    padding-top: px2rem(8);
+    padding-bottom: px2rem(12);
+    a{
+      color: #fff;
+    }
+  }
+}

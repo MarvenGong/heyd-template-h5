@@ -1,0 +1,184 @@
+@import "./reset.scss";
+@import "./var.scss";
+.img-block{
+  img{
+    width: 100%;
+  }
+}
+@mixin single-line-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.single-line-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin multi-line-ellipsis($row){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  overflow: hidden;
+}
+.text-danger{
+  color: #fe6150 !important;
+}
+.text-success{
+  color: #67c23a !important;
+}
+.text-wqd-primary{
+  color: $wqd-font-color
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+  .cube-input-field{
+    text-align: right !important;
+  }
+}
+.pull-left{
+  float: left !important;
+}
+.pull-right{
+  float: right !important;
+}
+.clearfix:before,.clearfix:after{
+  content: "";
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
+/*活动摇摆动画*/
+@keyframes swing {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+}
+/*改变透明度动画*/
+@keyframes opacity {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*图片缩放动画*/
+@keyframes scale {
+  0% {
+    transform: scale(0); 
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+#nprogress .bar {
+  background: #C79446 !important; //自定义颜色
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.cube-popup-content {
+  max-height: 84%;
+  overflow-y: scroll;
+  background: #fff;
+}
+// wqd
+.btn-form-select, .cube-select{
+  width: 100%;
+  height: 100%;
+  min-height: 46px;
+  background: transparent;
+  border: 0; color: #666;
+  font-size: 100%;
+  text-align: right;
+  background: url('/static/images/wqd/inf_backarrow_icon_normal@2x.png') right center no-repeat;
+  background-size: 6px 8px;
+  padding-right: 10px;
+  .cube-select-text, .cube-select-placeholder{
+    position: relative; top: 3px;
+  }
+  &:focus{
+    outline: none;
+  }
+  &.wqd-primary{
+    color: $wqd-font-color;
+    background-image: url('/static/images/wqd/signin_arrow_right_icon_normal@2x.png');
+  }
+}
+.cube-select-icon{
+  border-color: transparent !important;
+}
+.cube-form{
+  font-size: px2rem(28) !important;
+  &.lg-label-width{
+    .cube-form-label{
+      width: 150px;
+    }
+  }
+  &.no-bg{
+    background: none;
+  }
+  &.striped{
+    .cube-form-item{
+      background: #f4f4f4;
+    }
+    .cube-form-item:nth-child(even) {
+      background: #fff;
+    }
+    .cube-input{
+      background: none !important
+    }
+  }
+}
+.form-header{
+  font-size: px2rem(48);
+  line-height: px2rem(66);
+  background: #fff;
+  padding: px2rem(40) px2rem(30);
+}
+.form-btn-group{
+  padding: 40px 15px;
+}
+.btn-circle-close{
+  width: 24px; height: 24px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 20px;
+  position: relative;
+  &:focus{outline: none}
+  &:before, &::after{
+    content: " ";
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: rgba(255, 255, 255, .7);
+    position: absolute; top: 50%;
+    left: 3px;
+    transform: rotate(45deg);
+  }
+  &::after{
+    transform: rotate(-45deg)
+  }
+}
+.cube-popup-content {
+  border-radius: px2rem(8);
+}
