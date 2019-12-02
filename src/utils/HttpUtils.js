@@ -15,6 +15,12 @@ Vue.prototype.$ajax = axios;
 const ocrWhiteUrl = ['/loanRecord/list', '/loanRecord/detail', '/loanRecord/billPlan'];
 class Http {
   TOKEN_KEY = 'X-LEOPARD-TOKEN'
+  commonHeaders = {
+    'X-SERVICE': 'nirvana-boss', // 请求类型，B端请求还是C端请求，boss商户渠道均为B端
+    'X-CLIENT-TYPE': 'B', // 请求类型，B端请求还是C端请求，boss商户渠道均为B端
+    'X-ORG-NO': 1, // 组织机构ID，目前暂时写1
+    'X-CLIENT': 'WEB' // 客户端类型
+  }
   getCurrUrlMockStatus(relUrl) {
     return Config.HTTPMOCK_ON && httpMockUrlList.indexOf(relUrl) >= 0;
   }
@@ -49,7 +55,10 @@ class Http {
       url: httpBaseUrl + _url,
       dataType: 'json',
       [ajaxDataKey]: _data,
-      headers: _headers,
+      headers: {
+        ..._headers,
+        ...this.commonHeaders
+      },
       method: method,
     };
     return axios(ajaxOptions).then(res => {
