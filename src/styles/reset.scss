@@ -1,6 +1,6 @@
 $designWidth: 750;
-@function px2rem($px) {
-  @return $px/100 + rem;
+@function px2rem($px){
+	@return $px*320/$designWidth/20 + rem;
 }
 html, body {
   width: 100%;
