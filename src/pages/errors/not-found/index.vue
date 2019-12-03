@@ -2,7 +2,7 @@
   <section id="err-404">
     <div class="content_404">
       <div class="img-404">
-        <img src="/static/images/404.gif"/>
+        <img src="/images/404.gif"/>
       </div>
     </div>
     <h2>您访问的页面没找到哦~</h2>

@@ -110,7 +110,7 @@
   border: 0; color: #666;
   font-size: 100%;
   text-align: right;
-  background: url('/static/images/wqd/inf_backarrow_icon_normal@2x.png') right center no-repeat;
+  background: url('/images/wqd/inf_backarrow_icon_normal@2x.png') right center no-repeat;
   background-size: 6px 8px;
   padding-right: 10px;
   .cube-select-text, .cube-select-placeholder{
@@ -121,7 +121,7 @@
   }
   &.wqd-primary{
     color: $wqd-font-color;
-    background-image: url('/static/images/wqd/signin_arrow_right_icon_normal@2x.png');
+    background-image: url('/images/wqd/signin_arrow_right_icon_normal@2x.png');
   }
 }
 .cube-select-icon{
